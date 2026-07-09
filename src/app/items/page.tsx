@@ -1,5 +1,5 @@
 import { AddItemForm } from "@/components/AddItemForm";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/lib/prism";
 
 export const dynamic = "force-dynamic";
 

@@ -8,7 +8,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const body = (await request.json()) as { name?: string };
-  const name = body.name?.trim();
+  const name = body.title?.trim();
   if (!name) {
     return NextResponse.json({ error: "name is required" }, { status: 400 });
   }

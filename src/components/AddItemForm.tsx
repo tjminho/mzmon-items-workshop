@@ -25,7 +25,7 @@ export function AddItemForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} style={{ marginTop: 16 }}>
+    <form style={{ marginTop: 16 }}>
       <input
         value={name}
         onChange={(e) => setName(e.target.value)}
