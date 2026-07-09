@@ -1,7 +1,7 @@
 # mzmon-items-workshop
 
 > **Mzmon Academy 3순위** · Cursor · 인프런 · 유튜브  
-> **목표**: `/items` 품목 CRUD (Next.js App Router + Prisma + SQLite)  
+> **목표**: `/items` 품목 CRUD (Next.js 16 App Router + Prisma 7 + SQLite)  
 > **공개 Template**: https://github.com/tjminho/mzmon-items-workshop/generate  
 > **수강생 문서**: https://github.com/tjminho/mzmon-academy
 

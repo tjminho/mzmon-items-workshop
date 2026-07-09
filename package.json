@@ -3,24 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "prisma generate && next build",
     "start": "next start",
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate dev",
-    "db:seed": "node prisma/seed.mjs"
+    "db:seed": "prisma db seed"
   },
   "dependencies": {
-    "@prisma/client": "^6.9.0",
-    "next": "15.3.8",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "@prisma/adapter-better-sqlite3": "^7.3.0",
+    "@prisma/client": "^7.3.0",
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^17.2.3",
+    "next": "16.1.4",
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "prisma": "^6.9.0",
-    "typescript": "^5.8.0"
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "prisma": "^7.3.0",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "prisma",
+      "@prisma/engines"
+    ]
   }
 }
