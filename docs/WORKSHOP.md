@@ -11,7 +11,7 @@
 
 | 항목 | 내용 |
 |------|------|
-| **스택** | Next.js 15 App Router · Prisma · SQLite |
+| **스택** | Next.js 16 App Router · Prisma 7 · SQLite |
 | **화면** | `/items` — 목록 + 등록 |
 | **API** | `GET/POST /api/items` |
 | **용도** | 유튜브 Ep.1~6 · 3순위 cohort · 1일 6h |
@@ -81,13 +81,13 @@ git reset --hard ep3-db   # tag 만든 경우
 
 `main`에서 branch 생성 후 **아래 3가지만** 적용:
 
-### Bug 1 — Prisma import 경로
+### Bug 1 — prisma import 경로
 
 `src/app/items/page.tsx`
 
 ```diff
--import { PrismaClient } from "@prisma/client";
-+import { PrismaClient } from "@/prisma/client";
+-import { prisma } from "@/lib/prisma";
++import { prisma } from "@/lib/prism";
 ```
 
 ### Bug 2 — POST body key

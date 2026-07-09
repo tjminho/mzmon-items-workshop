@@ -1,9 +1,7 @@
-import { PrismaClient } from "@prisma/client";
 import { AddItemForm } from "@/components/AddItemForm";
+import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
-
-const prisma = new PrismaClient();
 
 export default async function ItemsPage() {
   const items = await prisma.item.findMany({ orderBy: { createdAt: "desc" } });
